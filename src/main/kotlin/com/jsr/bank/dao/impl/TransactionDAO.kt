@@ -3,6 +3,7 @@ package com.jsr.bank.dao.impl
 import com.jsr.bank.dao.ITransactionDAO
 import com.jsr.bank.data.Transaction
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.MongoOperations
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
@@ -33,6 +34,7 @@ open class TransactionDAO @Autowired constructor(private val mongoOperations: Mo
         val query = Query().apply {
             fromAccount?.let { addCriteria( Criteria.where(Transaction::fromAccount.name).`is`(it) ) }
             toAccount?.let { addCriteria( Criteria.where(Transaction::toAccount.name).`is`(it) ) }
+            with( Sort(Sort.Direction.DESC, Transaction::sentAt.name) )
         }
 
         return mongoOperations.find(query, Transaction::class.java)
