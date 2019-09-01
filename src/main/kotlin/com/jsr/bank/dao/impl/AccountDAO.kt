@@ -20,9 +20,9 @@ open class AccountDAO @Autowired constructor(private val mongoOperations: MongoO
     }
 
     override fun updateBalance(account: Long, amount: Double) {
-        // update amount value
+        // update balance value
         val criteria = Criteria.where(Balance::account.name).`is`(account)
-        val update = Update().apply { set(Balance::amount.name, amount) }
+        val update = Update().apply { set(Balance::balance.name, amount) }
         mongoOperations.updateFirst(Query(criteria), update, Balance::class.java)
     }
 

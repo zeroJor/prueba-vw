@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse
 class ErrorControllerAdvice {
 
     /**
-     * If a transaction exception happen, return the related message and status
+     * If a transaction exception happen, return the respectively HTTP status code and response body
      */
     @ExceptionHandler(TransactionException::class)
     fun handleExceptions(e: TransactionException, response: HttpServletResponse) {
