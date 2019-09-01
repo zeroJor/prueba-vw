@@ -3,7 +3,7 @@ REST API that provides functionality for transferring money and
 showing the past transactions in a historical transaction list.
 
 ### Demo
-The demo application in hosted [here](http://45.79.149.154:8080). 
+The demo application is hosted [here](http://45.79.149.154:8080). 
 
 ### Test
 You can test the application directly with [Swagger UI](http://45.79.149.154:8080) or including [this url]([here](https://www.getpostman.com/collections/bd567c9bc5d69efe4121)) in Postman.

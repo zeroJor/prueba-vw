@@ -28,7 +28,7 @@ class Configuration {
     fun provideApiInfo() = ApiInfo(
             "Digital Hub - Backend Assignment - CP",
             "API for transfer money and show the past transactions in a historical transaction list",
-            "0.1.0",
+            "1.0.0",
             "Free to use ;)",
             Contact("Jorge Segundo Rojas", "https://github.com/zeroJor/prueba-vw", "jorgesr@live.com.mx"),
             null,
