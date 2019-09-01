@@ -36,7 +36,7 @@ There are two options:
 
 2.- Package and run Jar file
 * Package using the commnand `mvn package` 
-* Run using the commnand `java -jar bank-0.1.0.jar`
+* Run using the commnand `java -jar bank-1.0.0.jar`
   
 
 ### Swagger
