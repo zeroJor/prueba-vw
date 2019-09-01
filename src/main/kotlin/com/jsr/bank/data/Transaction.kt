@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.util.*
 
-@ApiModel(value = "Transaction", description = "Money transaction between two acounts")
+@ApiModel(value = "Transaction", description = "Money transaction between two accounts")
 @Document(collection = "transactions")
 data class Transaction(
         @JsonIgnore @Id var id: ObjectId? = null,

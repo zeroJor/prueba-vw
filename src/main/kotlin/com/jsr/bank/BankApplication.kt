@@ -1,9 +1,9 @@
 package com.jsr.bank
 
+import com.jsr.bank.config.Configuration
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Import
-import com.jsr.bank.config.Configuration
 
 
 @Import(Configuration::class)

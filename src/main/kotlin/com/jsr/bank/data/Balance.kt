@@ -11,11 +11,11 @@ import java.util.*
 @ApiModel(value = "Balance", description = "Account balance")
 @Document(collection = "balance")
 data class Balance(
-        @JsonIgnore @Id var id: ObjectId,
-        @ApiModelProperty(required = true) var account: Long,
-        @ApiModelProperty(required = true) var balance: Double,
-        @ApiModelProperty(required = true) var owner: Long,
-        @ApiModelProperty(required = true) var createdAt: Date) {
+        @JsonIgnore @Id var id: ObjectId? = null,
+        @ApiModelProperty(required = true) var account: Long? = null,
+        @ApiModelProperty(required = true) var balance: Double? = null,
+        @ApiModelProperty(required = true) var owner: Long? = null,
+        @ApiModelProperty(required = true) var createdAt: Date? = null) {
 
     companion object {
 

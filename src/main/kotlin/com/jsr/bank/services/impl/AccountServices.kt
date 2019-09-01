@@ -39,7 +39,7 @@ class AccountServices: IAccountServices {
         }
 
         // origin account shouldn't be able to have a balance below $ -500.00
-        val originFinalAmount = from.balance -  transaction.amount!!
+        val originFinalAmount = from.balance!! -  transaction.amount!!
         if (originFinalAmount < Balance.MIN_BALANCE) {
             throw MinBalanceException(Balance.MIN_BALANCE)
         }
@@ -51,8 +51,8 @@ class AccountServices: IAccountServices {
          * insert transaction
          */
         transaction.sentAt = Date()
-        accountDAO.updateBalance(from.account, originFinalAmount)
-        accountDAO.updateBalance(to.account, to.balance + transaction.amount!!)
+        accountDAO.updateBalance(from.account!!, originFinalAmount)
+        accountDAO.updateBalance(to.account!!, to.balance!! + transaction.amount!!)
         transactionDAO.create(transaction)
     }
 
