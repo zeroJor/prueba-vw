@@ -12,7 +12,7 @@ interface IAccountDAO {
     fun findBalance(account: Long): Balance?
 
     /**
-     * Update the amount balance for a specific account
+     * Update the balance balance for a specific account
      * @param account
      * @param amount
      */
